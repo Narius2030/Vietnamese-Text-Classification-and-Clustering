@@ -1,0 +1,1 @@
+thanh hằng ( tổng_hợp ) thành_phố tên ngắn nhất ở nam bộ thuộc tỉnh nào ? tên gọi thành_phố 4 chữ_cái , ngắn nhất trong thành_phố phía nam . giao - ductrac - nghiem

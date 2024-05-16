@@ -1,0 +1,9 @@
+pandas
+matplotlib
+scikit-learn
+tqdm
+PyYAML
+beautifulsoup4
+pyvi
+pickle5
+tensorflow==2.15.0
