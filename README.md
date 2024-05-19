@@ -99,11 +99,12 @@ similarity_score = cosine_similarity([mean_sentence_embedding], mean_post_embedd
 question = '''Với CLB Hà Lan, tiền đạo cánh người Brazil đạt tỷ lệ ghi bàn và kiến tạo kỳ vọng là 0,58, chỉ xếp thứ 14 nếu đặt ở Ngoại hạng Anh. 
 Ngoài ra, Antony cũng được "thổi phồng" nhờ chơi cho CLB vượt trội về tài chính và lực lượng so với phần còn lại của giải vô địch Hà Lan.'''
 ```
-- Visualize the relationship among words
-
 ![image](https://github.com/Narius2030/Vietnamese-Text-Classification-and-Clustering/assets/94912102/cb19553b-5e8a-4c5d-b717-f8c438da6a9e)
 
+- Visualize the relationship among words
+![image](https://github.com/Narius2030/Vietnamese-Text-Classification-and-Clustering/assets/94912102/e6a9263b-ddad-479c-a4ee-8dcd9d861180)
 
 - Visualize the relationship among paragraphs
+![image](https://github.com/Narius2030/Vietnamese-Text-Classification-and-Clustering/assets/94912102/fb77ecfe-f9b6-4747-aabe-6aca71750894)
 
-![image](https://github.com/Narius2030/Vietnamese-Text-Classification-and-Clustering/assets/94912102/e6a9263b-ddad-479c-a4ee-8dcd9d861180)
+
