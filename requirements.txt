@@ -7,3 +7,4 @@ beautifulsoup4
 pyvi
 pickle5
 tensorflow==2.15.0
+scipy==1.12
