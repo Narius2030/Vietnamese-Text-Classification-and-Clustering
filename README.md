@@ -2,12 +2,12 @@
 
 ## Introduction
 > ### Text classification
-- In Text Classification task, I apply natural language processing techniques first for normalizing text and then I design a neural network using LSTM for learning the features of each paragraph
-- I choose Softmax activation function for classification in the final layer, the number of the unit in this layer are equal to the number of class I want to predict
+- In Text Classification task, I apply natural language processing techniques first for normalizing text and then I design a neural network using `LSTM` for learning the features of each paragraph
+- I choose `Softmax activation` function for classification in the final layer, the number of the unit in this layer are equal to the number of class I want to predict
 > ### Text clustering
-- In the Text Clustering task, I implement Word2Vec (skip-gram) for finding the relationships among words. 
-- Then, I embed word for the whole paragraphs and calculate the mean vectors which represent for embedded paragraphs
-- Finally, I calculate the Cosine similarity to estimate the similar among paragraphs so that I can cluster similar paragraphs into groups
+- In the Text Clustering task, I implement `Word2Vec (skip-gram)` for finding the relationships among words. 
+- Then, I embed word for the whole paragraphs and calculate the `mean vectors` which represent for `embedded paragraphs`
+- Finally, I calculate the `Cosine similarity` to estimate the similar among paragraphs so that I can cluster similar paragraphs into groups
 
 ### Buil Model
 > ### Text classification
