@@ -36,13 +36,19 @@ class PatchEmbedding():
             post_embeddings.append(post_embedding)
         return post_embeddings
 
+
+class MeanVectorizer(PatchEmbedding):
+    def __init__(self, word_model, stopword_path=None) -> None:
+        super().__init__(word_model, stopword_path)
+        pass
+    
     # Calculate sentence embeddings by averaging word embeddings
-    def mean_vector_embedding(self, embeddings:list):
+    def mean_vector_embedding(self, embeddings):
         if len(embeddings) == 0:
             return np.zeros(self.word_model.vector_size)
         return np.mean(embeddings, axis=0)
 
-    def mean_posts_embedding(self, post_embeddings:list) -> list:
+    def mean_posts_embedding(self, post_embeddings) -> list:
         mean_post_embedding = []
         for post_embedding in post_embeddings:
             mean_post_embedding.append(self.mean_vector_embedding(post_embedding))
