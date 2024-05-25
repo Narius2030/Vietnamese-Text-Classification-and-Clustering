@@ -11,24 +11,6 @@
 
 ### Buil Model
 > ### Text classification
-```python
-drop_out = 0.2
-output_unit = topic_size
-embedding_size = 128
-
-model = models.Sequential([
-  layers.Embedding(vocab_size, embedding_size),
-  layers.BatchNormalization(),
-  layers.LSTM(64, return_sequences=True),
-  layers.LSTM(64),
-  layers.Dropout(drop_out),
-  layers.Dense(9, activation='relu'),
-  layers.Dense(9, activation='relu'),
-  layers.Dense(9, activation='relu'),
-  layers.Dense(9, activation='relu'),
-  layers.Dense(units=output_unit, activation='softmax')
-])
-```
 ```markdown
 ___________________________________________________________
  Layer (type)                Output Shape              Param #   
@@ -85,5 +67,10 @@ Ngoài ra, Antony cũng được "thổi phồng" nhờ chơi cho CLB vượt tr
 - Visualize the relationship among paragraphs
 
 ![image](https://github.com/Narius2030/Vietnamese-Text-Classification-and-Clustering/assets/94912102/fb77ecfe-f9b6-4747-aabe-6aca71750894)
+
+>### Visualize on webpage
+I will use classification model and Cosine similarity technique to erect a simple webpage for sporting magazine searching
+
+![image](https://github.com/Narius2030/Vietnamese-Text-Classification-and-Clustering/assets/94912102/7a40b907-e50c-4d51-bd1d-9fdbe28cd43e)
 
 
