@@ -73,9 +73,13 @@ class NormalizeText():
     def word_separation(self, sentences:list) -> list:
         return [sen.split() for sen in sentences]
     
-    def normalize(self, doc) -> list:
+    def normalize(self, doc, stopword=0) -> list:
         doc = ViTokenizer.tokenize(doc)
         doc = doc.lower() # lower
+        
+        if stopword==1:
+            doc = cleandt.remove_stopword(doc, './data/vietnamese-stopwords-dash.txt')
+        
         tokens = doc.split() # split into words
         table = str.maketrans('', '', string.punctuation.replace("_", "")) # remove all punctuations
         tokens = [w.translate(table) for w in tokens]
@@ -90,6 +94,16 @@ class NormalizeText():
             line = ' '.join(tokens)
             sequences.append(line)
         return sequences
+    
+    def create_input_gensim(self, data, colname:str) -> list:
+        sequences = data[colname].to_list()
+        input_gensim = []
+        for sen in sequences:
+            try:
+                input_gensim.append(sen.split())
+            except Exception as ex:
+                pass
+        return input_gensim
     
     def create_input(self, sequences:list):
         sequence_digit = self.tokenizer.texts_to_sequences(sequences)

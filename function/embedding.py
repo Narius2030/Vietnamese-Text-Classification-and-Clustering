@@ -2,6 +2,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 from pyvi import ViTokenizer
 import numpy as np
 from tqdm import tqdm
+import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
 
 import sys
 sys.path.append("./src/dtprocess")
@@ -35,6 +37,23 @@ class PatchEmbedding():
             post_embedding = [self.word_model.wv[word] for word in post if word in self.word_model.wv]
             post_embeddings.append(post_embedding)
         return post_embeddings
+    
+    def word_scatterplot(self, words=None, sample=0):
+        if words == None:
+            if sample > 0:
+                words = np.random.choice(list(self.word_model.vocab.keys()), sample)
+            else:
+                words = [word for word in self.word_model.wv.vocab]
+            
+        word_vectors = np.array([self.word_model.wv[w] for w in words])
+        
+        twodim = PCA().fit_transform(word_vectors)[:,:2]
+        
+        fig = plt.figure(figsize=(6,5))
+        plt.scatter(twodim[:,0], twodim[:,1], edgecolors='k', c='r')
+        for word, (x,y) in zip(words, twodim):
+            plt.text(x+0.05, y-0.50, word)
+        return fig
 
 
 class MeanVectorizer(PatchEmbedding):
