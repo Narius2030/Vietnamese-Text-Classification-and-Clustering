@@ -11,6 +11,7 @@
 
 ### Buil Model
 > ### Text classification
+#### 1. LSTM
 ```markdown
 ___________________________________________________________
  Layer (type)                Output Shape              Param #   
@@ -40,6 +41,55 @@ ___________________________________________________________
 Total params: 4783261 (18.25 MB)
 Trainable params: 4783005 (18.25 MB)
 Non-trainable params: 256 (1.00 KB)
+_________________________________________________________________
+```
+
+#### 2. Hybrid (CNN and LSTM)
+
+```markdown
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_14 (Embedding)    (None, None, 128)         4955904   
+                                                                 
+ batch_normalization_26 (Ba  (None, None, 128)         512       
+ tchNormalization)                                               
+                                                                 
+ conv1d_13 (Conv1D)          (None, None, 128)         49280     
+                                                                 
+ max_pooling1d_12 (MaxPooli  (None, None, 128)         0         
+ ng1D)                                                           
+                                                                 
+ conv1d_14 (Conv1D)          (None, None, 128)         49280     
+                                                                 
+ max_pooling1d_13 (MaxPooli  (None, None, 128)         0         
+ ng1D)                                                           
+                                                                 
+ batch_normalization_27 (Ba  (None, None, 128)         512       
+ tchNormalization)                                               
+                                                                 
+ dropout_26 (Dropout)        (None, None, 128)         0         
+                                                                 
+ lstm_42 (LSTM)              (None, None, 128)         131584    
+                                                                 
+ lstm_43 (LSTM)              (None, None, 128)         131584    
+                                                                 
+ lstm_44 (LSTM)              (None, 128)               131584    
+                                                                 
+ dropout_27 (Dropout)        (None, 128)               0         
+                                                                 
+ dense_69 (Dense)            (None, 128)               16512     
+                                                                 
+ dense_70 (Dense)            (None, 64)                8256      
+                                                                 
+ dense_71 (Dense)            (None, 32)                2080      
+                                                                 
+ dense_72 (Dense)            (None, 7)                 231       
+                                                                 
+=================================================================
+Total params: 5477319 (20.89 MB)
+Trainable params: 5476807 (20.89 MB)
+Non-trainable params: 512 (2.00 KB)
 _________________________________________________________________
 ```
 
