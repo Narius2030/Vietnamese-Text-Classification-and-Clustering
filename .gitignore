@@ -1,5 +1,4 @@
 /.venv/**
-/temp/**
 /airflow_env/**
 /airflow/airflow.cfg
 /airflow/airflow.db
