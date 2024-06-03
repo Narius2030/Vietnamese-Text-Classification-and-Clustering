@@ -11,24 +11,7 @@
 
 ### Buil Model
 > ### Text classification
-```python
-drop_out = 0.2
-output_unit = topic_size
-embedding_size = 128
-
-model = models.Sequential([
-  layers.Embedding(vocab_size, embedding_size),
-  layers.BatchNormalization(),
-  layers.LSTM(64, return_sequences=True),
-  layers.LSTM(64),
-  layers.Dropout(drop_out),
-  layers.Dense(9, activation='relu'),
-  layers.Dense(9, activation='relu'),
-  layers.Dense(9, activation='relu'),
-  layers.Dense(9, activation='relu'),
-  layers.Dense(units=output_unit, activation='softmax')
-])
-```
+#### 1. LSTM
 ```markdown
 ___________________________________________________________
  Layer (type)                Output Shape              Param #   
@@ -61,6 +44,55 @@ Non-trainable params: 256 (1.00 KB)
 _________________________________________________________________
 ```
 
+#### 2. Hybrid (CNN and LSTM)
+
+```markdown
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_14 (Embedding)    (None, None, 128)         4955904   
+                                                                 
+ batch_normalization_26 (Ba  (None, None, 128)         512       
+ tchNormalization)                                               
+                                                                 
+ conv1d_13 (Conv1D)          (None, None, 128)         49280     
+                                                                 
+ max_pooling1d_12 (MaxPooli  (None, None, 128)         0         
+ ng1D)                                                           
+                                                                 
+ conv1d_14 (Conv1D)          (None, None, 128)         49280     
+                                                                 
+ max_pooling1d_13 (MaxPooli  (None, None, 128)         0         
+ ng1D)                                                           
+                                                                 
+ batch_normalization_27 (Ba  (None, None, 128)         512       
+ tchNormalization)                                               
+                                                                 
+ dropout_26 (Dropout)        (None, None, 128)         0         
+                                                                 
+ lstm_42 (LSTM)              (None, None, 128)         131584    
+                                                                 
+ lstm_43 (LSTM)              (None, None, 128)         131584    
+                                                                 
+ lstm_44 (LSTM)              (None, 128)               131584    
+                                                                 
+ dropout_27 (Dropout)        (None, 128)               0         
+                                                                 
+ dense_69 (Dense)            (None, 128)               16512     
+                                                                 
+ dense_70 (Dense)            (None, 64)                8256      
+                                                                 
+ dense_71 (Dense)            (None, 32)                2080      
+                                                                 
+ dense_72 (Dense)            (None, 7)                 231       
+                                                                 
+=================================================================
+Total params: 5477319 (20.89 MB)
+Trainable params: 5476807 (20.89 MB)
+Non-trainable params: 512 (2.00 KB)
+_________________________________________________________________
+```
+
 >### Text clustering
 ```python
 # Calculate sentence embeddings by averaging word embeddings
@@ -85,5 +117,10 @@ Ngoài ra, Antony cũng được "thổi phồng" nhờ chơi cho CLB vượt tr
 - Visualize the relationship among paragraphs
 
 ![image](https://github.com/Narius2030/Vietnamese-Text-Classification-and-Clustering/assets/94912102/fb77ecfe-f9b6-4747-aabe-6aca71750894)
+
+>### Visualize on webpage
+I will use classification model and Cosine similarity technique to erect a simple webpage for sporting magazine searching
+
+![image](https://github.com/Narius2030/Vietnamese-Text-Classification-and-Clustering/assets/94912102/7a40b907-e50c-4d51-bd1d-9fdbe28cd43e)
 
 
