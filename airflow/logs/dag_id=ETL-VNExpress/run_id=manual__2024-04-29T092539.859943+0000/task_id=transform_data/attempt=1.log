@@ -1,0 +1,45 @@
+[2024-04-29T16:26:14.332+0700] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-04-29T16:26:14.438+0700] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL-VNExpress.transform_data manual__2024-04-29T09:25:39.859943+00:00 [queued]>
+[2024-04-29T16:26:14.454+0700] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL-VNExpress.transform_data manual__2024-04-29T09:25:39.859943+00:00 [queued]>
+[2024-04-29T16:26:14.455+0700] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2024-04-29T16:26:14.495+0700] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): transform_data> on 2024-04-29 09:25:39.859943+00:00
+[2024-04-29T16:26:14.501+0700] {standard_task_runner.py:63} INFO - Started process 52561 to run task
+[2024-04-29T16:26:14.508+0700] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'ETL-VNExpress', 'transform_data', 'manual__2024-04-29T09:25:39.859943+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/scape_news.py', '--cfg-path', '/tmp/tmp_zhzuo4w']
+[2024-04-29T16:26:14.510+0700] {standard_task_runner.py:91} INFO - Job 8: Subtask transform_data
+[2024-04-29T16:26:14.648+0700] {task_command.py:426} INFO - Running <TaskInstance: ETL-VNExpress.transform_data manual__2024-04-29T09:25:39.859943+00:00 [running]> on host DESKTOP-BEALJ3H.
+[2024-04-29T16:26:14.811+0700] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL-VNExpress' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2024-04-29T09:25:39.859943+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-29T09:25:39.859943+00:00'
+[2024-04-29T16:26:14.813+0700] {taskinstance.py:430} INFO - ::endgroup::
+[2024-04-29T16:26:15.338+0700] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-04-29T16:26:15.341+0700] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow/plugins/clean_data.py", line 53, in transform
+    self.processed_news[col] = self.processed_news[col].apply(lambda x: self.lower_case(x))
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/pandas/core/series.py", line 4924, in apply
+    ).apply()
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/pandas/core/apply.py", line 1427, in apply
+    return self.apply_standard()
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/pandas/core/apply.py", line 1507, in apply_standard
+    mapped = obj._map_values(
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/pandas/core/base.py", line 921, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/pandas/core/algorithms.py", line 1743, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+  File "lib.pyx", line 2972, in pandas._libs.lib.map_infer
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow/plugins/clean_data.py", line 53, in <lambda>
+    self.processed_news[col] = self.processed_news[col].apply(lambda x: self.lower_case(x))
+TypeError: Transform.lower_case() takes 1 positional argument but 2 were given
+[2024-04-29T16:26:15.385+0700] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=ETL-VNExpress, task_id=transform_data, execution_date=20240429T092539, start_date=20240429T092614, end_date=20240429T092615
+[2024-04-29T16:26:15.420+0700] {standard_task_runner.py:110} ERROR - Failed to execute job 8 for task transform_data (Transform.lower_case() takes 1 positional argument but 2 were given; 52561)
+[2024-04-29T16:26:15.445+0700] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-04-29T16:26:15.478+0700] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-04-29T16:26:15.498+0700] {local_task_job_runner.py:222} INFO - ::endgroup::

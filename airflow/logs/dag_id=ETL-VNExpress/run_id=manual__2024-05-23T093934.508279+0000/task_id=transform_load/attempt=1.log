@@ -1,0 +1,34 @@
+[2024-05-23T16:47:14.099+0700] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-23T16:47:14.322+0700] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL-VNExpress.transform_load manual__2024-05-23T09:39:34.508279+00:00 [queued]>
+[2024-05-23T16:47:14.346+0700] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL-VNExpress.transform_load manual__2024-05-23T09:39:34.508279+00:00 [queued]>
+[2024-05-23T16:47:14.349+0700] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2024-05-23T16:47:14.400+0700] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): transform_load> on 2024-05-23 09:39:34.508279+00:00
+[2024-05-23T16:47:14.408+0700] {standard_task_runner.py:63} INFO - Started process 20201 to run task
+[2024-05-23T16:47:14.419+0700] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'ETL-VNExpress', 'transform_load', 'manual__2024-05-23T09:39:34.508279+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/scape_news.py', '--cfg-path', '/tmp/tmpz5lnn0ev']
+[2024-05-23T16:47:14.421+0700] {standard_task_runner.py:91} INFO - Job 30: Subtask transform_load
+[2024-05-23T16:47:14.535+0700] {task_command.py:426} INFO - Running <TaskInstance: ETL-VNExpress.transform_load manual__2024-05-23T09:39:34.508279+00:00 [running]> on host DESKTOP-BEALJ3H.
+[2024-05-23T16:47:14.744+0700] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL-VNExpress' AIRFLOW_CTX_TASK_ID='transform_load' AIRFLOW_CTX_EXECUTION_DATE='2024-05-23T09:39:34.508279+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-23T09:39:34.508279+00:00'
+[2024-05-23T16:47:14.753+0700] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-23T16:47:18.405+0700] {logging_mixin.py:188} WARNING - /mnt/d/Programming/Vietnamese-Text-Generator/airflow/plugins/clean_data.py:68 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2024-05-23T16:47:18.420+0700] {logging_mixin.py:188} WARNING - /mnt/d/Programming/Vietnamese-Text-Generator/airflow/plugins/clean_data.py:70 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2024-05-23T16:47:36.376+0700] {logging_mixin.py:188} WARNING -   0%|          | 0/6 [00:00<?, ?it/s]
+[2024-05-23T16:47:37.679+0700] {logging_mixin.py:188} WARNING -  17%|#6        | 1/6 [00:01<00:06,  1.30s/it]
+[2024-05-23T16:47:38.579+0700] {logging_mixin.py:188} WARNING -  33%|###3      | 2/6 [00:02<00:04,  1.07s/it]
+[2024-05-23T16:47:38.747+0700] {logging_mixin.py:188} WARNING -  50%|#####     | 3/6 [00:02<00:01,  1.53it/s]
+[2024-05-23T16:47:40.130+0700] {logging_mixin.py:188} WARNING -  67%|######6   | 4/6 [00:03<00:01,  1.06it/s]
+[2024-05-23T16:47:42.109+0700] {logging_mixin.py:188} WARNING -  83%|########3 | 5/6 [00:05<00:01,  1.32s/it]
+[2024-05-23T16:47:45.611+0700] {logging_mixin.py:188} WARNING - 100%|##########| 6/6 [00:09<00:00,  2.06s/it]
+[2024-05-23T16:47:45.613+0700] {logging_mixin.py:188} WARNING - 100%|##########| 6/6 [00:09<00:00,  1.54s/it]
+[2024-05-23T16:47:45.617+0700] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-23T16:47:45.618+0700] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-23T16:47:45.641+0700] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=ETL-VNExpress, task_id=transform_load, execution_date=20240523T093934, start_date=20240523T094714, end_date=20240523T094745
+[2024-05-23T16:47:45.726+0700] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-23T16:47:45.793+0700] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-23T16:47:45.812+0700] {local_task_job_runner.py:222} INFO - ::endgroup::

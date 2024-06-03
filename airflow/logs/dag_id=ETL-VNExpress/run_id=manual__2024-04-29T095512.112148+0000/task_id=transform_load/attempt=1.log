@@ -1,0 +1,33 @@
+[2024-04-29T16:55:46.012+0700] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-04-29T16:55:46.098+0700] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL-VNExpress.transform_load manual__2024-04-29T09:55:12.112148+00:00 [queued]>
+[2024-04-29T16:55:46.115+0700] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL-VNExpress.transform_load manual__2024-04-29T09:55:12.112148+00:00 [queued]>
+[2024-04-29T16:55:46.116+0700] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2024-04-29T16:55:46.151+0700] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): transform_load> on 2024-04-29 09:55:12.112148+00:00
+[2024-04-29T16:55:46.158+0700] {standard_task_runner.py:63} INFO - Started process 60770 to run task
+[2024-04-29T16:55:46.163+0700] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'ETL-VNExpress', 'transform_load', 'manual__2024-04-29T09:55:12.112148+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/scape_news.py', '--cfg-path', '/tmp/tmp1n2r0ajf']
+[2024-04-29T16:55:46.165+0700] {standard_task_runner.py:91} INFO - Job 13: Subtask transform_load
+[2024-04-29T16:55:46.257+0700] {task_command.py:426} INFO - Running <TaskInstance: ETL-VNExpress.transform_load manual__2024-04-29T09:55:12.112148+00:00 [running]> on host DESKTOP-BEALJ3H.
+[2024-04-29T16:55:46.397+0700] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL-VNExpress' AIRFLOW_CTX_TASK_ID='transform_load' AIRFLOW_CTX_EXECUTION_DATE='2024-04-29T09:55:12.112148+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-29T09:55:12.112148+00:00'
+[2024-04-29T16:55:46.399+0700] {taskinstance.py:430} INFO - ::endgroup::
+[2024-04-29T16:55:46.844+0700] {logging_mixin.py:188} WARNING - /mnt/d/Programming/Vietnamese-Text-Generator/airflow/plugins/clean_data.py:48 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2024-04-29T16:55:46.849+0700] {logging_mixin.py:188} WARNING - /mnt/d/Programming/Vietnamese-Text-Generator/airflow/plugins/clean_data.py:51 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2024-04-29T16:55:46.857+0700] {logging_mixin.py:188} WARNING - /mnt/d/Programming/Vietnamese-Text-Generator/airflow/plugins/clean_data.py:53 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2024-04-29T16:55:50.264+0700] {logging_mixin.py:188} WARNING - 0it [00:00, ?it/s]
+[2024-04-29T16:55:50.265+0700] {logging_mixin.py:188} WARNING - 0it [00:00, ?it/s]
+[2024-04-29T16:55:50.267+0700] {python.py:237} INFO - Done. Returned value was: None
+[2024-04-29T16:55:50.270+0700] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-04-29T16:55:50.283+0700] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=ETL-VNExpress, task_id=transform_load, execution_date=20240429T095512, start_date=20240429T095546, end_date=20240429T095550
+[2024-04-29T16:55:50.352+0700] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-04-29T16:55:50.397+0700] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-04-29T16:55:50.409+0700] {local_task_job_runner.py:222} INFO - ::endgroup::

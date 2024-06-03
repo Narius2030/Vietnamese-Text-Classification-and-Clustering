@@ -1,0 +1,346 @@
+[2024-05-23T16:39:49.246+0700] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-23T16:39:49.348+0700] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL-VNExpress.extract_data manual__2024-05-23T09:38:10.719499+00:00 [queued]>
+[2024-05-23T16:39:49.364+0700] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL-VNExpress.extract_data manual__2024-05-23T09:38:10.719499+00:00 [queued]>
+[2024-05-23T16:39:49.365+0700] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2024-05-23T16:39:49.414+0700] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): extract_data> on 2024-05-23 09:38:10.719499+00:00
+[2024-05-23T16:39:49.421+0700] {standard_task_runner.py:63} INFO - Started process 18356 to run task
+[2024-05-23T16:39:49.426+0700] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'ETL-VNExpress', 'extract_data', 'manual__2024-05-23T09:38:10.719499+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/scape_news.py', '--cfg-path', '/tmp/tmpdgdvk0ct']
+[2024-05-23T16:39:49.428+0700] {standard_task_runner.py:91} INFO - Job 26: Subtask extract_data
+[2024-05-23T16:39:49.510+0700] {task_command.py:426} INFO - Running <TaskInstance: ETL-VNExpress.extract_data manual__2024-05-23T09:38:10.719499+00:00 [running]> on host DESKTOP-BEALJ3H.
+[2024-05-23T16:39:49.662+0700] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL-VNExpress' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-23T09:38:10.719499+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-23T09:38:10.719499+00:00'
+[2024-05-23T16:39:49.664+0700] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-23T16:39:53.801+0700] {logging_mixin.py:188} INFO - Scrape doi-song: Done...
+[2024-05-23T16:40:04.435+0700] {logging_mixin.py:188} INFO - Scrape giai-tri: Done...
+[2024-05-23T16:40:11.833+0700] {logging_mixin.py:188} INFO - Scrape khoa-hoc: Done...
+[2024-05-23T16:40:22.783+0700] {logging_mixin.py:188} INFO - Scrape the-thao: Done...
+[2024-05-23T16:40:26.192+0700] {logging_mixin.py:188} INFO - Scrape du-lich: Done...
+[2024-05-23T16:40:32.082+0700] {logging_mixin.py:188} INFO - Scrape giao-duc: Done...
+[2024-05-23T16:40:32.084+0700] {logging_mixin.py:188} INFO - 
+Crawling...
+[2024-05-23T16:40:32.085+0700] {logging_mixin.py:188} INFO - Topic doi-song - Number of Sub-topic: 245
+[2024-05-23T16:40:32.089+0700] {logging_mixin.py:188} WARNING -   0%|          | 0/245 [00:00<?, ?it/s]
+[2024-05-23T16:40:32.301+0700] {logging_mixin.py:188} WARNING -   0%|          | 1/245 [00:00<00:51,  4.76it/s]
+[2024-05-23T16:40:32.488+0700] {logging_mixin.py:188} WARNING -   1%|          | 2/245 [00:00<00:47,  5.08it/s]
+[2024-05-23T16:40:32.751+0700] {logging_mixin.py:188} WARNING -   1%|1         | 3/245 [00:00<00:54,  4.41it/s]
+[2024-05-23T16:40:33.021+0700] {logging_mixin.py:188} WARNING -   2%|1         | 4/245 [00:00<00:58,  4.10it/s]
+[2024-05-23T16:40:33.431+0700] {logging_mixin.py:188} WARNING -   2%|2         | 5/245 [00:01<01:12,  3.29it/s]
+[2024-05-23T16:40:33.765+0700] {logging_mixin.py:188} WARNING -   2%|2         | 6/245 [00:01<01:15,  3.19it/s]
+[2024-05-23T16:40:34.059+0700] {logging_mixin.py:188} WARNING -   3%|2         | 7/245 [00:01<01:13,  3.25it/s]
+[2024-05-23T16:40:34.566+0700] {logging_mixin.py:188} WARNING -   3%|3         | 8/245 [00:02<01:27,  2.70it/s]
+[2024-05-23T16:40:34.784+0700] {logging_mixin.py:188} WARNING -   4%|3         | 9/245 [00:02<01:16,  3.09it/s]
+[2024-05-23T16:40:35.033+0700] {logging_mixin.py:188} WARNING -   4%|4         | 10/245 [00:02<01:10,  3.33it/s]
+[2024-05-23T16:40:35.337+0700] {logging_mixin.py:188} WARNING -   4%|4         | 11/245 [00:03<01:10,  3.32it/s]
+[2024-05-23T16:40:35.563+0700] {logging_mixin.py:188} WARNING -   5%|4         | 12/245 [00:03<01:04,  3.59it/s]
+[2024-05-23T16:40:35.890+0700] {logging_mixin.py:188} WARNING -   5%|5         | 13/245 [00:03<01:08,  3.41it/s]
+[2024-05-23T16:40:36.239+0700] {logging_mixin.py:188} WARNING -   6%|5         | 14/245 [00:04<01:11,  3.22it/s]
+[2024-05-23T16:40:36.580+0700] {logging_mixin.py:188} WARNING -   6%|6         | 15/245 [00:04<01:13,  3.13it/s]
+[2024-05-23T16:40:36.881+0700] {logging_mixin.py:188} WARNING -   7%|6         | 16/245 [00:04<01:11,  3.19it/s]
+[2024-05-23T16:40:37.169+0700] {logging_mixin.py:188} WARNING -   7%|6         | 17/245 [00:05<01:09,  3.27it/s]
+[2024-05-23T16:40:37.428+0700] {logging_mixin.py:188} WARNING -   7%|7         | 18/245 [00:05<01:06,  3.43it/s]
+[2024-05-23T16:40:37.648+0700] {logging_mixin.py:188} WARNING -   8%|7         | 19/245 [00:05<01:01,  3.70it/s]
+[2024-05-23T16:40:37.890+0700] {logging_mixin.py:188} WARNING -   8%|8         | 20/245 [00:05<00:58,  3.82it/s]
+[2024-05-23T16:40:38.310+0700] {logging_mixin.py:188} WARNING -   9%|8         | 21/245 [00:06<01:09,  3.23it/s]
+[2024-05-23T16:40:38.534+0700] {logging_mixin.py:188} WARNING -   9%|8         | 22/245 [00:06<01:03,  3.53it/s]
+[2024-05-23T16:40:38.800+0700] {logging_mixin.py:188} WARNING -   9%|9         | 23/245 [00:06<01:01,  3.59it/s]
+[2024-05-23T16:40:39.130+0700] {logging_mixin.py:188} WARNING -  10%|9         | 24/245 [00:07<01:04,  3.40it/s]
+[2024-05-23T16:40:40.503+0700] {logging_mixin.py:188} WARNING -  10%|#         | 25/245 [00:08<02:15,  1.62it/s]
+[2024-05-23T16:40:40.755+0700] {logging_mixin.py:188} WARNING -  11%|#         | 26/245 [00:08<01:51,  1.97it/s]
+[2024-05-23T16:40:41.020+0700] {logging_mixin.py:188} WARNING -  11%|#1        | 27/245 [00:08<01:34,  2.30it/s]
+[2024-05-23T16:40:41.232+0700] {logging_mixin.py:188} WARNING -  11%|#1        | 28/245 [00:09<01:19,  2.72it/s]
+[2024-05-23T16:40:41.470+0700] {logging_mixin.py:188} WARNING -  12%|#1        | 29/245 [00:09<01:11,  3.04it/s]
+[2024-05-23T16:40:42.580+0700] {logging_mixin.py:188} WARNING -  12%|#2        | 30/245 [00:10<02:01,  1.77it/s]
+[2024-05-23T16:40:42.846+0700] {logging_mixin.py:188} WARNING -  13%|#2        | 31/245 [00:10<01:41,  2.11it/s]
+[2024-05-23T16:40:43.067+0700] {logging_mixin.py:188} WARNING -  13%|#3        | 32/245 [00:10<01:24,  2.51it/s]
+[2024-05-23T16:40:43.372+0700] {logging_mixin.py:188} WARNING -  13%|#3        | 33/245 [00:11<01:18,  2.70it/s]
+[2024-05-23T16:40:43.619+0700] {logging_mixin.py:188} WARNING -  14%|#3        | 34/245 [00:11<01:10,  3.00it/s]
+[2024-05-23T16:40:43.914+0700] {logging_mixin.py:188} WARNING -  14%|#4        | 35/245 [00:11<01:07,  3.11it/s]
+[2024-05-23T16:40:45.420+0700] {logging_mixin.py:188} WARNING -  15%|#4        | 36/245 [00:13<02:21,  1.48it/s]
+[2024-05-23T16:40:46.924+0700] {logging_mixin.py:188} WARNING -  15%|#5        | 37/245 [00:14<03:12,  1.08it/s]
+[2024-05-23T16:40:47.463+0700] {logging_mixin.py:188} WARNING -  16%|#5        | 38/245 [00:15<02:47,  1.24it/s]
+[2024-05-23T16:40:47.929+0700] {logging_mixin.py:188} WARNING -  16%|#5        | 39/245 [00:15<02:25,  1.42it/s]
+[2024-05-23T16:40:48.264+0700] {logging_mixin.py:188} WARNING -  16%|#6        | 40/245 [00:16<02:01,  1.68it/s]
+[2024-05-23T16:40:48.569+0700] {logging_mixin.py:188} WARNING -  17%|#6        | 41/245 [00:16<01:43,  1.97it/s]
+[2024-05-23T16:40:49.879+0700] {logging_mixin.py:188} WARNING -  17%|#7        | 42/245 [00:17<02:31,  1.34it/s]
+[2024-05-23T16:40:50.767+0700] {logging_mixin.py:188} WARNING -  18%|#7        | 43/245 [00:18<02:39,  1.27it/s]
+[2024-05-23T16:40:51.179+0700] {logging_mixin.py:188} WARNING -  18%|#7        | 44/245 [00:19<02:16,  1.48it/s]
+[2024-05-23T16:40:51.580+0700] {logging_mixin.py:188} WARNING -  18%|#8        | 45/245 [00:19<01:58,  1.68it/s]
+[2024-05-23T16:40:51.867+0700] {logging_mixin.py:188} WARNING -  19%|#8        | 46/245 [00:19<01:39,  1.99it/s]
+[2024-05-23T16:40:53.153+0700] {logging_mixin.py:188} WARNING -  19%|#9        | 47/245 [00:21<02:25,  1.36it/s]
+[2024-05-23T16:40:55.065+0700] {logging_mixin.py:188} WARNING -  20%|#9        | 48/245 [00:22<03:34,  1.09s/it]
+[2024-05-23T16:40:55.476+0700] {logging_mixin.py:188} WARNING -  20%|##        | 49/245 [00:23<02:53,  1.13it/s]
+[2024-05-23T16:40:55.975+0700] {logging_mixin.py:188} WARNING -  20%|##        | 50/245 [00:23<02:30,  1.30it/s]
+[2024-05-23T16:40:57.226+0700] {logging_mixin.py:188} WARNING -  21%|##        | 51/245 [00:25<02:57,  1.09it/s]
+[2024-05-23T16:40:59.142+0700] {logging_mixin.py:188} WARNING -  21%|##1       | 52/245 [00:27<03:54,  1.21s/it]
+[2024-05-23T16:40:59.532+0700] {logging_mixin.py:188} WARNING -  22%|##1       | 53/245 [00:27<03:05,  1.03it/s]
+[2024-05-23T16:40:59.785+0700] {logging_mixin.py:188} WARNING -  22%|##2       | 54/245 [00:27<02:23,  1.33it/s]
+[2024-05-23T16:41:00.036+0700] {logging_mixin.py:188} WARNING -  22%|##2       | 55/245 [00:27<01:54,  1.66it/s]
+[2024-05-23T16:41:00.283+0700] {logging_mixin.py:188} WARNING -  23%|##2       | 56/245 [00:28<01:33,  2.02it/s]
+[2024-05-23T16:41:00.686+0700] {logging_mixin.py:188} WARNING -  23%|##3       | 57/245 [00:28<01:28,  2.14it/s]
+[2024-05-23T16:41:00.960+0700] {logging_mixin.py:188} WARNING -  24%|##3       | 58/245 [00:28<01:16,  2.44it/s]
+[2024-05-23T16:41:01.250+0700] {logging_mixin.py:188} WARNING -  24%|##4       | 59/245 [00:29<01:09,  2.67it/s]
+[2024-05-23T16:41:01.919+0700] {logging_mixin.py:188} WARNING -  24%|##4       | 60/245 [00:29<01:25,  2.16it/s]
+[2024-05-23T16:41:02.117+0700] {logging_mixin.py:188} WARNING -  25%|##4       | 61/245 [00:30<01:10,  2.61it/s]
+[2024-05-23T16:41:02.364+0700] {logging_mixin.py:188} WARNING -  25%|##5       | 62/245 [00:30<01:02,  2.92it/s]
+[2024-05-23T16:41:02.633+0700] {logging_mixin.py:188} WARNING -  26%|##5       | 63/245 [00:30<00:58,  3.12it/s]
+[2024-05-23T16:41:02.914+0700] {logging_mixin.py:188} WARNING -  26%|##6       | 64/245 [00:30<00:55,  3.24it/s]
+[2024-05-23T16:41:03.259+0700] {logging_mixin.py:188} WARNING -  27%|##6       | 65/245 [00:31<00:57,  3.13it/s]
+[2024-05-23T16:41:03.492+0700] {logging_mixin.py:188} WARNING -  27%|##6       | 66/245 [00:31<00:52,  3.41it/s]
+[2024-05-23T16:41:03.806+0700] {logging_mixin.py:188} WARNING -  27%|##7       | 67/245 [00:31<00:53,  3.34it/s]
+[2024-05-23T16:41:04.092+0700] {logging_mixin.py:188} WARNING -  28%|##7       | 68/245 [00:32<00:52,  3.38it/s]
+[2024-05-23T16:41:04.323+0700] {logging_mixin.py:188} WARNING -  28%|##8       | 69/245 [00:32<00:48,  3.62it/s]
+[2024-05-23T16:41:04.906+0700] {logging_mixin.py:188} WARNING -  29%|##8       | 70/245 [00:32<01:04,  2.72it/s]
+[2024-05-23T16:41:05.273+0700] {logging_mixin.py:188} WARNING -  29%|##8       | 71/245 [00:33<01:04,  2.72it/s]
+[2024-05-23T16:41:05.482+0700] {logging_mixin.py:188} WARNING -  29%|##9       | 72/245 [00:33<00:55,  3.12it/s]
+[2024-05-23T16:41:06.800+0700] {logging_mixin.py:188} WARNING -  30%|##9       | 73/245 [00:34<01:46,  1.61it/s]
+[2024-05-23T16:41:07.038+0700] {logging_mixin.py:188} WARNING -  30%|###       | 74/245 [00:34<01:26,  1.98it/s]
+[2024-05-23T16:41:07.278+0700] {logging_mixin.py:188} WARNING -  31%|###       | 75/245 [00:35<01:12,  2.35it/s]
+[2024-05-23T16:41:08.129+0700] {logging_mixin.py:188} WARNING -  31%|###1      | 76/245 [00:36<01:33,  1.81it/s]
+[2024-05-23T16:41:08.366+0700] {logging_mixin.py:188} WARNING -  31%|###1      | 77/245 [00:36<01:17,  2.18it/s]
+[2024-05-23T16:41:09.618+0700] {logging_mixin.py:188} WARNING -  32%|###1      | 78/245 [00:37<01:56,  1.44it/s]
+[2024-05-23T16:41:10.929+0700] {logging_mixin.py:188} WARNING -  32%|###2      | 79/245 [00:38<02:26,  1.14it/s]
+[2024-05-23T16:41:11.333+0700] {logging_mixin.py:188} WARNING -  33%|###2      | 80/245 [00:39<02:01,  1.36it/s]
+[2024-05-23T16:41:11.607+0700] {logging_mixin.py:188} WARNING -  33%|###3      | 81/245 [00:39<01:38,  1.67it/s]
+[2024-05-23T16:41:11.923+0700] {logging_mixin.py:188} WARNING -  33%|###3      | 82/245 [00:39<01:23,  1.95it/s]
+[2024-05-23T16:41:12.205+0700] {logging_mixin.py:188} WARNING -  34%|###3      | 83/245 [00:40<01:11,  2.25it/s]
+[2024-05-23T16:41:12.569+0700] {logging_mixin.py:188} WARNING -  34%|###4      | 84/245 [00:40<01:07,  2.38it/s]
+[2024-05-23T16:41:12.818+0700] {logging_mixin.py:188} WARNING -  35%|###4      | 85/245 [00:40<00:59,  2.71it/s]
+[2024-05-23T16:41:13.082+0700] {logging_mixin.py:188} WARNING -  35%|###5      | 86/245 [00:40<00:53,  2.96it/s]
+[2024-05-23T16:41:14.263+0700] {logging_mixin.py:188} WARNING -  36%|###5      | 87/245 [00:42<01:33,  1.69it/s]
+[2024-05-23T16:41:14.554+0700] {logging_mixin.py:188} WARNING -  36%|###5      | 88/245 [00:42<01:18,  2.00it/s]
+[2024-05-23T16:41:14.960+0700] {logging_mixin.py:188} WARNING -  36%|###6      | 89/245 [00:42<01:13,  2.12it/s]
+[2024-05-23T16:41:15.637+0700] {logging_mixin.py:188} WARNING -  37%|###6      | 90/245 [00:43<01:22,  1.87it/s]
+[2024-05-23T16:41:15.990+0700] {logging_mixin.py:188} WARNING -  37%|###7      | 91/245 [00:43<01:13,  2.09it/s]
+[2024-05-23T16:41:16.240+0700] {logging_mixin.py:188} WARNING -  38%|###7      | 92/245 [00:44<01:02,  2.43it/s]
+[2024-05-23T16:41:16.658+0700] {logging_mixin.py:188} WARNING -  38%|###7      | 93/245 [00:44<01:02,  2.42it/s]
+[2024-05-23T16:41:16.951+0700] {logging_mixin.py:188} WARNING -  38%|###8      | 94/245 [00:44<00:56,  2.65it/s]
+[2024-05-23T16:41:17.359+0700] {logging_mixin.py:188} WARNING -  39%|###8      | 95/245 [00:45<00:57,  2.59it/s]
+[2024-05-23T16:41:18.460+0700] {logging_mixin.py:188} WARNING -  39%|###9      | 96/245 [00:46<01:29,  1.66it/s]
+[2024-05-23T16:41:18.886+0700] {logging_mixin.py:188} WARNING -  40%|###9      | 97/245 [00:46<01:21,  1.82it/s]
+[2024-05-23T16:41:19.938+0700] {logging_mixin.py:188} WARNING -  40%|####      | 98/245 [00:47<01:42,  1.43it/s]
+[2024-05-23T16:41:20.280+0700] {logging_mixin.py:188} WARNING -  40%|####      | 99/245 [00:48<01:26,  1.69it/s]
+[2024-05-23T16:41:20.520+0700] {logging_mixin.py:188} WARNING -  41%|####      | 100/245 [00:48<01:10,  2.06it/s]
+[2024-05-23T16:41:20.806+0700] {logging_mixin.py:188} WARNING -  41%|####1     | 101/245 [00:48<01:01,  2.35it/s]
+[2024-05-23T16:41:21.058+0700] {logging_mixin.py:188} WARNING -  42%|####1     | 102/245 [00:48<00:53,  2.67it/s]
+[2024-05-23T16:41:22.472+0700] {logging_mixin.py:188} WARNING -  42%|####2     | 103/245 [00:50<01:37,  1.46it/s]
+[2024-05-23T16:41:23.542+0700] {logging_mixin.py:188} WARNING -  42%|####2     | 104/245 [00:51<01:52,  1.25it/s]
+[2024-05-23T16:41:23.833+0700] {logging_mixin.py:188} WARNING -  43%|####2     | 105/245 [00:51<01:30,  1.54it/s]
+[2024-05-23T16:41:25.480+0700] {logging_mixin.py:188} WARNING -  43%|####3     | 106/245 [00:53<02:11,  1.06it/s]
+[2024-05-23T16:41:26.566+0700] {logging_mixin.py:188} WARNING -  44%|####3     | 107/245 [00:54<02:16,  1.01it/s]
+[2024-05-23T16:41:26.827+0700] {logging_mixin.py:188} WARNING -  44%|####4     | 108/245 [00:54<01:45,  1.30it/s]
+[2024-05-23T16:41:27.087+0700] {logging_mixin.py:188} WARNING -  44%|####4     | 109/245 [00:54<01:23,  1.62it/s]
+[2024-05-23T16:41:27.330+0700] {logging_mixin.py:188} WARNING -  45%|####4     | 110/245 [00:55<01:08,  1.98it/s]
+[2024-05-23T16:41:28.472+0700] {logging_mixin.py:188} WARNING -  45%|####5     | 111/245 [00:56<01:33,  1.44it/s]
+[2024-05-23T16:41:28.736+0700] {logging_mixin.py:188} WARNING -  46%|####5     | 112/245 [00:56<01:15,  1.77it/s]
+[2024-05-23T16:41:29.047+0700] {logging_mixin.py:188} WARNING -  46%|####6     | 113/245 [00:56<01:04,  2.04it/s]
+[2024-05-23T16:41:30.908+0700] {logging_mixin.py:188} WARNING -  47%|####6     | 114/245 [00:58<01:58,  1.11it/s]
+[2024-05-23T16:41:31.175+0700] {logging_mixin.py:188} WARNING -  47%|####6     | 115/245 [00:59<01:32,  1.41it/s]
+[2024-05-23T16:41:31.450+0700] {logging_mixin.py:188} WARNING -  47%|####7     | 116/245 [00:59<01:14,  1.72it/s]
+[2024-05-23T16:41:31.716+0700] {logging_mixin.py:188} WARNING -  48%|####7     | 117/245 [00:59<01:02,  2.06it/s]
+[2024-05-23T16:41:32.989+0700] {logging_mixin.py:188} WARNING -  48%|####8     | 118/245 [01:00<01:31,  1.38it/s]
+[2024-05-23T16:41:33.239+0700] {logging_mixin.py:188} WARNING -  49%|####8     | 119/245 [01:01<01:13,  1.72it/s]
+[2024-05-23T16:41:33.518+0700] {logging_mixin.py:188} WARNING -  49%|####8     | 120/245 [01:01<01:01,  2.04it/s]
+[2024-05-23T16:41:33.830+0700] {logging_mixin.py:188} WARNING -  49%|####9     | 121/245 [01:01<00:54,  2.29it/s]
+[2024-05-23T16:41:34.057+0700] {logging_mixin.py:188} WARNING -  50%|####9     | 122/245 [01:01<00:45,  2.68it/s]
+[2024-05-23T16:41:34.273+0700] {logging_mixin.py:188} WARNING -  50%|#####     | 123/245 [01:02<00:39,  3.06it/s]
+[2024-05-23T16:41:34.498+0700] {logging_mixin.py:188} WARNING -  51%|#####     | 124/245 [01:02<00:35,  3.38it/s]
+[2024-05-23T16:41:35.393+0700] {logging_mixin.py:188} WARNING -  51%|#####1    | 125/245 [01:03<00:57,  2.10it/s]
+[2024-05-23T16:41:35.704+0700] {logging_mixin.py:188} WARNING -  51%|#####1    | 126/245 [01:03<00:50,  2.35it/s]
+[2024-05-23T16:41:37.339+0700] {logging_mixin.py:188} WARNING -  52%|#####1    | 127/245 [01:05<01:33,  1.27it/s]
+[2024-05-23T16:41:37.836+0700] {logging_mixin.py:188} WARNING -  52%|#####2    | 128/245 [01:05<01:22,  1.43it/s]
+[2024-05-23T16:41:38.154+0700] {logging_mixin.py:188} WARNING -  53%|#####2    | 129/245 [01:06<01:08,  1.71it/s]
+[2024-05-23T16:41:39.544+0700] {logging_mixin.py:188} WARNING -  53%|#####3    | 130/245 [01:07<01:35,  1.21it/s]
+[2024-05-23T16:41:40.025+0700] {logging_mixin.py:188} WARNING -  53%|#####3    | 131/245 [01:07<01:22,  1.38it/s]
+[2024-05-23T16:41:41.121+0700] {logging_mixin.py:188} WARNING -  54%|#####3    | 132/245 [01:09<01:34,  1.20it/s]
+[2024-05-23T16:41:41.996+0700] {logging_mixin.py:188} WARNING -  54%|#####4    | 133/245 [01:09<01:34,  1.18it/s]
+[2024-05-23T16:41:42.423+0700] {logging_mixin.py:188} WARNING -  55%|#####4    | 134/245 [01:10<01:20,  1.39it/s]
+[2024-05-23T16:41:42.694+0700] {logging_mixin.py:188} WARNING -  55%|#####5    | 135/245 [01:10<01:04,  1.71it/s]
+[2024-05-23T16:41:42.919+0700] {logging_mixin.py:188} WARNING -  56%|#####5    | 136/245 [01:10<00:52,  2.09it/s]
+[2024-05-23T16:41:44.279+0700] {logging_mixin.py:188} WARNING -  56%|#####5    | 137/245 [01:12<01:20,  1.35it/s]
+[2024-05-23T16:41:45.458+0700] {logging_mixin.py:188} WARNING -  56%|#####6    | 138/245 [01:13<01:33,  1.14it/s]
+[2024-05-23T16:41:45.709+0700] {logging_mixin.py:188} WARNING -  57%|#####6    | 139/245 [01:13<01:12,  1.46it/s]
+[2024-05-23T16:41:46.014+0700] {logging_mixin.py:188} WARNING -  57%|#####7    | 140/245 [01:13<01:00,  1.75it/s]
+[2024-05-23T16:41:46.233+0700] {logging_mixin.py:188} WARNING -  58%|#####7    | 141/245 [01:14<00:48,  2.14it/s]
+[2024-05-23T16:41:46.457+0700] {logging_mixin.py:188} WARNING -  58%|#####7    | 142/245 [01:14<00:40,  2.54it/s]
+[2024-05-23T16:41:47.484+0700] {logging_mixin.py:188} WARNING -  58%|#####8    | 143/245 [01:15<00:59,  1.71it/s]
+[2024-05-23T16:41:47.779+0700] {logging_mixin.py:188} WARNING -  59%|#####8    | 144/245 [01:15<00:50,  2.01it/s]
+[2024-05-23T16:41:48.001+0700] {logging_mixin.py:188} WARNING -  59%|#####9    | 145/245 [01:15<00:41,  2.41it/s]
+[2024-05-23T16:41:49.229+0700] {logging_mixin.py:188} WARNING -  60%|#####9    | 146/245 [01:17<01:05,  1.52it/s]
+[2024-05-23T16:41:50.292+0700] {logging_mixin.py:188} WARNING -  60%|######    | 147/245 [01:18<01:16,  1.28it/s]
+[2024-05-23T16:41:51.399+0700] {logging_mixin.py:188} WARNING -  60%|######    | 148/245 [01:19<01:25,  1.14it/s]
+[2024-05-23T16:41:51.630+0700] {logging_mixin.py:188} WARNING -  61%|######    | 149/245 [01:19<01:05,  1.46it/s]
+[2024-05-23T16:41:52.935+0700] {logging_mixin.py:188} WARNING -  61%|######1   | 150/245 [01:20<01:22,  1.15it/s]
+[2024-05-23T16:41:53.219+0700] {logging_mixin.py:188} WARNING -  62%|######1   | 151/245 [01:21<01:05,  1.44it/s]
+[2024-05-23T16:41:53.945+0700] {logging_mixin.py:188} WARNING -  62%|######2   | 152/245 [01:21<01:05,  1.42it/s]
+[2024-05-23T16:41:54.190+0700] {logging_mixin.py:188} WARNING -  62%|######2   | 153/245 [01:22<00:52,  1.77it/s]
+[2024-05-23T16:41:54.396+0700] {logging_mixin.py:188} WARNING -  63%|######2   | 154/245 [01:22<00:41,  2.18it/s]
+[2024-05-23T16:41:54.616+0700] {logging_mixin.py:188} WARNING -  63%|######3   | 155/245 [01:22<00:34,  2.58it/s]
+[2024-05-23T16:41:54.947+0700] {logging_mixin.py:188} WARNING -  64%|######3   | 156/245 [01:22<00:32,  2.70it/s]
+[2024-05-23T16:41:56.152+0700] {logging_mixin.py:188} WARNING -  64%|######4   | 157/245 [01:24<00:54,  1.61it/s]
+[2024-05-23T16:41:56.410+0700] {logging_mixin.py:188} WARNING -  64%|######4   | 158/245 [01:24<00:44,  1.95it/s]
+[2024-05-23T16:41:56.669+0700] {logging_mixin.py:188} WARNING -  65%|######4   | 159/245 [01:24<00:37,  2.29it/s]
+[2024-05-23T16:41:57.720+0700] {logging_mixin.py:188} WARNING -  65%|######5   | 160/245 [01:25<00:52,  1.61it/s]
+[2024-05-23T16:41:58.030+0700] {logging_mixin.py:188} WARNING -  66%|######5   | 161/245 [01:25<00:44,  1.90it/s]
+[2024-05-23T16:41:58.376+0700] {logging_mixin.py:188} WARNING -  66%|######6   | 162/245 [01:26<00:39,  2.12it/s]
+[2024-05-23T16:41:58.592+0700] {logging_mixin.py:188} WARNING -  67%|######6   | 163/245 [01:26<00:32,  2.53it/s]
+[2024-05-23T16:41:59.625+0700] {logging_mixin.py:188} WARNING -  67%|######6   | 164/245 [01:27<00:47,  1.70it/s]
+[2024-05-23T16:42:00.988+0700] {logging_mixin.py:188} WARNING -  67%|######7   | 165/245 [01:28<01:05,  1.22it/s]
+[2024-05-23T16:42:01.275+0700] {logging_mixin.py:188} WARNING -  68%|######7   | 166/245 [01:29<00:52,  1.52it/s]
+[2024-05-23T16:42:01.603+0700] {logging_mixin.py:188} WARNING -  68%|######8   | 167/245 [01:29<00:43,  1.78it/s]
+[2024-05-23T16:42:01.907+0700] {logging_mixin.py:188} WARNING -  69%|######8   | 168/245 [01:29<00:37,  2.07it/s]
+[2024-05-23T16:42:02.282+0700] {logging_mixin.py:188} WARNING -  69%|######8   | 169/245 [01:30<00:34,  2.22it/s]
+[2024-05-23T16:42:02.583+0700] {logging_mixin.py:188} WARNING -  69%|######9   | 170/245 [01:30<00:30,  2.46it/s]
+[2024-05-23T16:42:02.898+0700] {logging_mixin.py:188} WARNING -  70%|######9   | 171/245 [01:30<00:28,  2.64it/s]
+[2024-05-23T16:42:03.215+0700] {logging_mixin.py:188} WARNING -  70%|#######   | 172/245 [01:31<00:26,  2.78it/s]
+[2024-05-23T16:42:03.473+0700] {logging_mixin.py:188} WARNING -  71%|#######   | 173/245 [01:31<00:23,  3.04it/s]
+[2024-05-23T16:42:03.739+0700] {logging_mixin.py:188} WARNING -  71%|#######1  | 174/245 [01:31<00:22,  3.22it/s]
+[2024-05-23T16:42:04.046+0700] {logging_mixin.py:188} WARNING -  71%|#######1  | 175/245 [01:31<00:21,  3.23it/s]
+[2024-05-23T16:42:04.411+0700] {logging_mixin.py:188} WARNING -  72%|#######1  | 176/245 [01:32<00:22,  3.07it/s]
+[2024-05-23T16:42:04.636+0700] {logging_mixin.py:188} WARNING -  72%|#######2  | 177/245 [01:32<00:20,  3.38it/s]
+[2024-05-23T16:42:05.255+0700] {logging_mixin.py:188} WARNING -  73%|#######2  | 178/245 [01:33<00:26,  2.55it/s]
+[2024-05-23T16:42:05.655+0700] {logging_mixin.py:188} WARNING -  73%|#######3  | 179/245 [01:33<00:26,  2.53it/s]
+[2024-05-23T16:42:09.178+0700] {logging_mixin.py:188} WARNING -  73%|#######3  | 180/245 [01:37<01:26,  1.33s/it]
+[2024-05-23T16:42:09.608+0700] {logging_mixin.py:188} WARNING -  74%|#######3  | 181/245 [01:37<01:07,  1.06s/it]
+[2024-05-23T16:42:10.032+0700] {logging_mixin.py:188} WARNING -  74%|#######4  | 182/245 [01:37<00:54,  1.15it/s]
+[2024-05-23T16:42:10.482+0700] {logging_mixin.py:188} WARNING -  75%|#######4  | 183/245 [01:38<00:46,  1.34it/s]
+[2024-05-23T16:42:11.775+0700] {logging_mixin.py:188} WARNING -  75%|#######5  | 184/245 [01:39<00:55,  1.10it/s]
+[2024-05-23T16:42:12.059+0700] {logging_mixin.py:188} WARNING -  76%|#######5  | 185/245 [01:39<00:43,  1.39it/s]
+[2024-05-23T16:42:12.275+0700] {logging_mixin.py:188} WARNING -  76%|#######5  | 186/245 [01:40<00:33,  1.75it/s]
+[2024-05-23T16:42:12.504+0700] {logging_mixin.py:188} WARNING -  76%|#######6  | 187/245 [01:40<00:27,  2.14it/s]
+[2024-05-23T16:42:12.724+0700] {logging_mixin.py:188} WARNING -  77%|#######6  | 188/245 [01:40<00:22,  2.54it/s]
+[2024-05-23T16:42:12.998+0700] {logging_mixin.py:188} WARNING -  77%|#######7  | 189/245 [01:40<00:20,  2.80it/s]
+[2024-05-23T16:42:13.229+0700] {logging_mixin.py:188} WARNING -  78%|#######7  | 190/245 [01:41<00:17,  3.13it/s]
+[2024-05-23T16:42:13.459+0700] {logging_mixin.py:188} WARNING -  78%|#######7  | 191/245 [01:41<00:15,  3.42it/s]
+[2024-05-23T16:42:13.713+0700] {logging_mixin.py:188} WARNING -  78%|#######8  | 192/245 [01:41<00:14,  3.56it/s]
+[2024-05-23T16:42:14.023+0700] {logging_mixin.py:188} WARNING -  79%|#######8  | 193/245 [01:41<00:15,  3.45it/s]
+[2024-05-23T16:42:14.252+0700] {logging_mixin.py:188} WARNING -  79%|#######9  | 194/245 [01:42<00:13,  3.68it/s]
+[2024-05-23T16:42:14.510+0700] {logging_mixin.py:188} WARNING -  80%|#######9  | 195/245 [01:42<00:13,  3.74it/s]
+[2024-05-23T16:42:14.738+0700] {logging_mixin.py:188} WARNING -  80%|########  | 196/245 [01:42<00:12,  3.91it/s]
+[2024-05-23T16:42:15.058+0700] {logging_mixin.py:188} WARNING -  80%|########  | 197/245 [01:42<00:13,  3.64it/s]
+[2024-05-23T16:42:15.279+0700] {logging_mixin.py:188} WARNING -  81%|########  | 198/245 [01:43<00:12,  3.87it/s]
+[2024-05-23T16:42:15.543+0700] {logging_mixin.py:188} WARNING -  81%|########1 | 199/245 [01:43<00:11,  3.84it/s]
+[2024-05-23T16:42:15.792+0700] {logging_mixin.py:188} WARNING -  82%|########1 | 200/245 [01:43<00:11,  3.89it/s]
+[2024-05-23T16:42:16.038+0700] {logging_mixin.py:188} WARNING -  82%|########2 | 201/245 [01:43<00:11,  3.94it/s]
+[2024-05-23T16:42:16.233+0700] {logging_mixin.py:188} WARNING -  82%|########2 | 202/245 [01:44<00:10,  4.24it/s]
+[2024-05-23T16:42:16.486+0700] {logging_mixin.py:188} WARNING -  83%|########2 | 203/245 [01:44<00:10,  4.15it/s]
+[2024-05-23T16:42:16.708+0700] {logging_mixin.py:188} WARNING -  83%|########3 | 204/245 [01:44<00:09,  4.25it/s]
+[2024-05-23T16:42:16.940+0700] {logging_mixin.py:188} WARNING -  84%|########3 | 205/245 [01:44<00:09,  4.27it/s]
+[2024-05-23T16:42:17.148+0700] {logging_mixin.py:188} WARNING -  84%|########4 | 206/245 [01:45<00:08,  4.42it/s]
+[2024-05-23T16:42:17.377+0700] {logging_mixin.py:188} WARNING -  84%|########4 | 207/245 [01:45<00:08,  4.40it/s]
+[2024-05-23T16:42:17.595+0700] {logging_mixin.py:188} WARNING -  85%|########4 | 208/245 [01:45<00:08,  4.46it/s]
+[2024-05-23T16:42:17.941+0700] {logging_mixin.py:188} WARNING -  85%|########5 | 209/245 [01:45<00:09,  3.83it/s]
+[2024-05-23T16:42:19.171+0700] {logging_mixin.py:188} WARNING -  86%|########5 | 210/245 [01:47<00:19,  1.81it/s]
+[2024-05-23T16:42:19.429+0700] {logging_mixin.py:188} WARNING -  86%|########6 | 211/245 [01:47<00:15,  2.16it/s]
+[2024-05-23T16:42:19.710+0700] {logging_mixin.py:188} WARNING -  87%|########6 | 212/245 [01:47<00:13,  2.45it/s]
+[2024-05-23T16:42:20.126+0700] {logging_mixin.py:188} WARNING -  87%|########6 | 213/245 [01:48<00:13,  2.43it/s]
+[2024-05-23T16:42:20.460+0700] {logging_mixin.py:188} WARNING -  87%|########7 | 214/245 [01:48<00:12,  2.58it/s]
+[2024-05-23T16:42:20.923+0700] {logging_mixin.py:188} WARNING -  88%|########7 | 215/245 [01:48<00:12,  2.44it/s]
+[2024-05-23T16:42:22.586+0700] {logging_mixin.py:188} WARNING -  88%|########8 | 216/245 [01:50<00:22,  1.27it/s]
+[2024-05-23T16:42:23.081+0700] {logging_mixin.py:188} WARNING -  89%|########8 | 217/245 [01:50<00:19,  1.43it/s]
+[2024-05-23T16:42:23.461+0700] {logging_mixin.py:188} WARNING -  89%|########8 | 218/245 [01:51<00:16,  1.66it/s]
+[2024-05-23T16:42:23.894+0700] {logging_mixin.py:188} WARNING -  89%|########9 | 219/245 [01:51<00:14,  1.81it/s]
+[2024-05-23T16:42:24.367+0700] {logging_mixin.py:188} WARNING -  90%|########9 | 220/245 [01:52<00:13,  1.89it/s]
+[2024-05-23T16:42:25.674+0700] {logging_mixin.py:188} WARNING -  90%|######### | 221/245 [01:53<00:18,  1.31it/s]
+[2024-05-23T16:42:26.741+0700] {logging_mixin.py:188} WARNING -  91%|######### | 222/245 [01:54<00:19,  1.17it/s]
+[2024-05-23T16:42:27.169+0700] {logging_mixin.py:188} WARNING -  91%|#########1| 223/245 [01:55<00:15,  1.38it/s]
+[2024-05-23T16:42:27.547+0700] {logging_mixin.py:188} WARNING -  91%|#########1| 224/245 [01:55<00:13,  1.61it/s]
+[2024-05-23T16:42:27.806+0700] {logging_mixin.py:188} WARNING -  92%|#########1| 225/245 [01:55<00:10,  1.95it/s]
+[2024-05-23T16:42:28.045+0700] {logging_mixin.py:188} WARNING -  92%|#########2| 226/245 [01:55<00:08,  2.32it/s]
+[2024-05-23T16:42:28.316+0700] {logging_mixin.py:188} WARNING -  93%|#########2| 227/245 [01:56<00:06,  2.61it/s]
+[2024-05-23T16:42:28.581+0700] {logging_mixin.py:188} WARNING -  93%|#########3| 228/245 [01:56<00:05,  2.88it/s]
+[2024-05-23T16:42:29.618+0700] {logging_mixin.py:188} WARNING -  93%|#########3| 229/245 [01:57<00:08,  1.80it/s]
+[2024-05-23T16:42:29.881+0700] {logging_mixin.py:188} WARNING -  94%|#########3| 230/245 [01:57<00:07,  2.14it/s]
+[2024-05-23T16:42:30.279+0700] {logging_mixin.py:188} WARNING -  94%|#########4| 231/245 [01:58<00:06,  2.24it/s]
+[2024-05-23T16:42:30.609+0700] {logging_mixin.py:188} WARNING -  95%|#########4| 232/245 [01:58<00:05,  2.43it/s]
+[2024-05-23T16:42:31.972+0700] {logging_mixin.py:188} WARNING -  95%|#########5| 233/245 [01:59<00:08,  1.43it/s]
+[2024-05-23T16:42:33.186+0700] {logging_mixin.py:188} WARNING -  96%|#########5| 234/245 [02:01<00:09,  1.17it/s]
+[2024-05-23T16:42:33.599+0700] {logging_mixin.py:188} WARNING -  96%|#########5| 235/245 [02:01<00:07,  1.39it/s]
+[2024-05-23T16:42:34.219+0700] {logging_mixin.py:188} WARNING -  96%|#########6| 236/245 [02:02<00:06,  1.45it/s]
+[2024-05-23T16:42:38.665+0700] {logging_mixin.py:188} WARNING -  97%|#########6| 237/245 [02:06<00:14,  1.82s/it]
+[2024-05-23T16:42:39.633+0700] {logging_mixin.py:188} WARNING -  97%|#########7| 238/245 [02:07<00:10,  1.56s/it]
+[2024-05-23T16:42:39.929+0700] {logging_mixin.py:188} WARNING -  98%|#########7| 239/245 [02:07<00:07,  1.18s/it]
+[2024-05-23T16:42:40.850+0700] {logging_mixin.py:188} WARNING -  98%|#########7| 240/245 [02:08<00:05,  1.10s/it]
+[2024-05-23T16:42:41.986+0700] {logging_mixin.py:188} WARNING -  98%|#########8| 241/245 [02:09<00:04,  1.11s/it]
+[2024-05-23T16:42:42.281+0700] {logging_mixin.py:188} WARNING -  99%|#########8| 242/245 [02:10<00:02,  1.15it/s]
+[2024-05-23T16:42:42.497+0700] {logging_mixin.py:188} WARNING -  99%|#########9| 243/245 [02:10<00:01,  1.49it/s]
+[2024-05-23T16:42:42.747+0700] {logging_mixin.py:188} WARNING - 100%|#########9| 244/245 [02:10<00:00,  1.83it/s]
+[2024-05-23T16:42:42.988+0700] {logging_mixin.py:188} WARNING - 100%|##########| 245/245 [02:10<00:00,  2.20it/s]
+[2024-05-23T16:42:42.990+0700] {logging_mixin.py:188} WARNING - 100%|##########| 245/245 [02:10<00:00,  1.87it/s]
+[2024-05-23T16:42:42.992+0700] {logging_mixin.py:188} INFO - Topic giai-tri - Number of Sub-topic: 406
+[2024-05-23T16:42:42.997+0700] {logging_mixin.py:188} WARNING -   0%|          | 0/406 [00:00<?, ?it/s]
+[2024-05-23T16:42:43.330+0700] {logging_mixin.py:188} WARNING -   0%|          | 1/406 [00:00<02:14,  3.01it/s]
+[2024-05-23T16:42:43.547+0700] {logging_mixin.py:188} WARNING -   0%|          | 2/406 [00:00<01:46,  3.79it/s]
+[2024-05-23T16:42:44.547+0700] {logging_mixin.py:188} WARNING -   1%|          | 3/406 [00:01<04:01,  1.67it/s]
+[2024-05-23T16:42:44.805+0700] {logging_mixin.py:188} WARNING -   1%|          | 4/406 [00:01<03:06,  2.15it/s]
+[2024-05-23T16:42:45.025+0700] {logging_mixin.py:188} WARNING -   1%|1         | 5/406 [00:02<02:31,  2.65it/s]
+[2024-05-23T16:42:45.287+0700] {logging_mixin.py:188} WARNING -   1%|1         | 6/406 [00:02<02:15,  2.96it/s]
+[2024-05-23T16:42:45.597+0700] {logging_mixin.py:188} WARNING -   2%|1         | 7/406 [00:02<02:11,  3.04it/s]
+[2024-05-23T16:42:45.914+0700] {logging_mixin.py:188} WARNING -   2%|1         | 8/406 [00:02<02:09,  3.08it/s]
+[2024-05-23T16:42:46.169+0700] {logging_mixin.py:188} WARNING -   2%|2         | 9/406 [00:03<02:00,  3.30it/s]
+[2024-05-23T16:42:46.445+0700] {logging_mixin.py:188} WARNING -   2%|2         | 10/406 [00:03<01:56,  3.39it/s]
+[2024-05-23T16:42:46.721+0700] {logging_mixin.py:188} WARNING -   3%|2         | 11/406 [00:03<01:54,  3.46it/s]
+[2024-05-23T16:42:46.997+0700] {logging_mixin.py:188} WARNING -   3%|2         | 12/406 [00:03<01:52,  3.51it/s]
+[2024-05-23T16:42:47.296+0700] {logging_mixin.py:188} WARNING -   3%|3         | 13/406 [00:04<01:53,  3.46it/s]
+[2024-05-23T16:42:47.600+0700] {logging_mixin.py:188} WARNING -   3%|3         | 14/406 [00:04<01:55,  3.40it/s]
+[2024-05-23T16:42:48.203+0700] {logging_mixin.py:188} WARNING -   4%|3         | 15/406 [00:05<02:31,  2.59it/s]
+[2024-05-23T16:42:51.493+0700] {logging_mixin.py:188} WARNING -   4%|3         | 16/406 [00:08<08:11,  1.26s/it]
+[2024-05-23T16:42:51.788+0700] {logging_mixin.py:188} WARNING -   4%|4         | 17/406 [00:08<06:17,  1.03it/s]
+[2024-05-23T16:42:52.027+0700] {logging_mixin.py:188} WARNING -   4%|4         | 18/406 [00:09<04:51,  1.33it/s]
+[2024-05-23T16:42:52.262+0700] {logging_mixin.py:188} WARNING -   5%|4         | 19/406 [00:09<03:50,  1.68it/s]
+[2024-05-23T16:42:53.280+0700] {logging_mixin.py:188} WARNING -   5%|4         | 20/406 [00:10<04:38,  1.38it/s]
+[2024-05-23T16:42:53.642+0700] {logging_mixin.py:188} WARNING -   5%|5         | 21/406 [00:10<03:56,  1.63it/s]
+[2024-05-23T16:42:53.909+0700] {logging_mixin.py:188} WARNING -   5%|5         | 22/406 [00:10<03:15,  1.96it/s]
+[2024-05-23T16:42:54.241+0700] {logging_mixin.py:188} WARNING -   6%|5         | 23/406 [00:11<02:54,  2.19it/s]
+[2024-05-23T16:42:54.554+0700] {logging_mixin.py:188} WARNING -   6%|5         | 24/406 [00:11<02:37,  2.42it/s]
+[2024-05-23T16:42:54.884+0700] {logging_mixin.py:188} WARNING -   6%|6         | 25/406 [00:11<02:28,  2.57it/s]
+[2024-05-23T16:42:55.183+0700] {logging_mixin.py:188} WARNING -   6%|6         | 26/406 [00:12<02:17,  2.76it/s]
+[2024-05-23T16:42:55.223+0700] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-23T16:42:55.227+0700] {process_utils.py:132} INFO - Sending Signals.SIGTERM to group 18356. PIDs of all processes in the group: [18356]
+[2024-05-23T16:42:55.228+0700] {process_utils.py:87} INFO - Sending the signal Signals.SIGTERM to group 18356
+[2024-05-23T16:42:55.296+0700] {taskinstance.py:2607} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-05-23T16:42:55.298+0700] {logging_mixin.py:188} WARNING -   6%|6         | 26/406 [00:12<02:59,  2.11it/s]
+[2024-05-23T16:42:55.301+0700] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-23T16:42:55.313+0700] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow/plugins/crawl_news.py", line 26, in scrape_news
+    content = get_content_from_article(url, items[0], items[1], topic)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow/plugins/data_scrape/crawler/getlinks.py", line 57, in get_content_from_article
+    raw_content = get_content_url(url)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow/plugins/data_scrape/crawler/getlinks.py", line 34, in get_content_url
+    rep = requests.get(url, headers=header)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1099, in _validate_conn
+    conn.connect()
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/urllib3/connection.py", line 653, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/urllib3/connection.py", line 806, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 440, in ssl_wrap_socket
+    context.load_verify_locations(ca_certs, ca_cert_dir, ca_cert_data)
+  File "/mnt/d/Programming/Vietnamese-Text-Generator/airflow_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2609, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2024-05-23T16:42:55.453+0700] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=ETL-VNExpress, task_id=extract_data, execution_date=20240523T093810, start_date=20240523T093949, end_date=20240523T094255
+[2024-05-23T16:42:55.522+0700] {process_utils.py:80} INFO - Process psutil.Process(pid=18356, status='terminated', exitcode=2, started='16:39:48') (18356) terminated with exit code 2

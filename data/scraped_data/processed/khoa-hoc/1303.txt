@@ -1,0 +1,1 @@
+cửa_sổ ôtô nâng lên hạ xuống bằng cách nàocửa sổ ôtô dịch_chuyển trơn_tru chỉ với một nút bấm bên trong nhưng người_ngoài không_thể kéo lên hay ấn xuống một_cách ép_buộc
