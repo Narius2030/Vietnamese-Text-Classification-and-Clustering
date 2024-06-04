@@ -1,5 +1,7 @@
 # Vietnamese-Text-Classification-and-Clustering
 
+The model aims to automatically classify news data based on genre or topic. Data was collected from VnExpress by BeatifulSoup combining Airflow to schedule the collection.
+
 ## Introduction
 > ### Text classification
 - In Text Classification task, I apply natural language processing techniques first for normalizing text and then I design a neural network using `LSTM` for learning the features of each paragraph
