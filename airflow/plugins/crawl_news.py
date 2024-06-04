@@ -6,7 +6,7 @@ from data_scrape.crawler.utils import read_yaml
 from data_scrape.crawler.getlinks import get_links_from_subtopics, get_content_from_article
 
 def scrape_news():
-    topics_links = read_yaml('/mnt/d/Programming/Vietnamese-Text-Generator/airflow/plugins/data_scrape/crawler/links.yaml')
+    topics_links = read_yaml('/mnt/d/Programming/Vietnamese-Text-Classification-and-Clustering/airflow/plugins/data_scrape/crawler/links.yaml')
     topics_links = get_links_from_subtopics(topics_links, pages=3)
         
     # set output path

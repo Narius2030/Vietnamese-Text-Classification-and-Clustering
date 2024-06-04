@@ -6,7 +6,7 @@ from tqdm import tqdm
 from data_scrape.dtprocess import cleandt
 from pyvi import ViTokenizer
 
-ROOT_PATH = '/mnt/d/Programming/Vietnamese-Text-Generator'
+ROOT_PATH = '/mnt/d/Programming/Vietnamese-Text-Classification-and-Clustering'
 
 def remove_punctuation(comment):
     # Create a translation table
