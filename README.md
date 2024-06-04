@@ -9,7 +9,56 @@
 - Then, I embed word for the whole paragraphs and calculate the `mean vectors` which represent for `embedded paragraphs`
 - Finally, I calculate the `Cosine similarity` to estimate the similar among paragraphs so that I can cluster similar paragraphs into groups
 
-### Buil Model
+## Scrape data from website
+
+The goal of this data pipeline will be to help automate the ETL process, extract - transform - store data from the source to the target data warehouse. The data flow in this project is timed at 17:55 every day, automatically executing the declared ETL process. In the data flow there will be 3 main components:
+- `extract_data`: extract raw data from the above sources and save to the stage area (text files)
+- `transform_load`: retrieve data from text files saved from the previous task, transform and clean the data to suit the purpose of the problem, export data to text files according to each topic folder and csv files for all
+- `print_date`: output the completion time
+
+DAG source code
+
+```python
+def print_date():
+    print('Today is {}'.format(datetime.today().date()))
+    
+dag = DAG(
+    'ETL-VNExpress',
+    default_args={'start_date': days_ago(1)},
+    schedule_interval='55 17 * * *',
+    catchup=False
+)
+
+extract_data = PythonOperator(
+    task_id='extract_data',
+    python_callable=scrape_news,
+    dag=dag
+)
+
+transform_load = PythonOperator(
+    task_id='transform_load',
+    python_callable=transform_load,
+    dag=dag
+)
+
+print_date_task = PythonOperator(
+    task_id='print_date',
+    python_callable=print_date,
+    dag=dag
+)
+
+
+# Set the dependencies between the tasks
+extract_data >> transform_load >> print_date_task
+# transform_load >> print_date_task
+```
+
+DAG Diagram
+
+![image](https://github.com/Narius2030/Vietnamese-Text-Classification-and-Clustering/assets/94912102/9bcc681e-1c9f-47e6-8a2c-58749c3cd5d3)
+
+
+## Build Model
 > ### Text classification
 #### 1. LSTM
 ```markdown
